@@ -16,13 +16,13 @@ class myThread (threading.Thread):
         print_time(self.name, self.counter, 5)
         print ("Exiting " + self.name)
 
-    def print_time(threadName, delay, counter):
-        while counter:
-            if exitFlag:
-                threadName.exit()
-            time.sleep(delay)
-            print("%s: %s" % (threadName, time.ctime(time.time())))
-            counter -= 1
+def print_time(threadName, delay, counter):
+    while counter:
+        if exitFlag:
+            threadName.exit()
+        time.sleep(delay)
+        print("%s: %s" % (threadName, time.ctime(time.time())))
+        counter -= 1
 
 # Create new threads
 thread1 = myThread(1, "Thread-1", 1)
