@@ -1,5 +1,7 @@
 # !/usr/bin/python3
 
+# if for some reason a pyc file is generated remove it with this following command: find . -name \*.pyc -delete
+
 import threading
 import time
 
